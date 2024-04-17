@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">{{ student.name }}</h5>
+    <a
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      routerLink="{{ student.id }}"
+      >{{ student.email }}</a
+    >
+  </div>
+</div>

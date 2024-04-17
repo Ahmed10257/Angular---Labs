@@ -1,0 +1,38 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "awdad",
+      "age": 35,
+      "email": "awdasd@yaho.com",
+      "address": "Address"
+    },
+    {
+      "id": "2",
+      "name": "Name",
+      "age": 30,
+      "email": "jane.smith@example.co",
+      "address": "Address"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "age": 35,
+      "email": "alice.johnson@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Tester",
+      "age": 30,
+      "email": "ayhaga@ayhaga.com",
+      "address": "how knows, lost"
+    },
+    {
+      "id": "1",
+      "name": "Edit Form",
+      "age": 30,
+      "email": "LOL@LOL.com",
+      "address": "Address"
+    }
+  ]
+}

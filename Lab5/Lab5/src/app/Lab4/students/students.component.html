@@ -1,0 +1,6 @@
+<div class="text-center mt-5">
+  <h4>All Our Students</h4>
+  @for(student of students; track student.id){
+  <app-student [student]="student"></app-student>
+  }
+</div>

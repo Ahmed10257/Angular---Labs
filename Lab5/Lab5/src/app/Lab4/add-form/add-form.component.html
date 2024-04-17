@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header h3">Add New Student</div>
+        <div class="card-body">
+          <form [formGroup]="myForm">
+            <div class="mb-3">
+              <label for="id" class="form-label">ID</label>
+              <input
+                formControlName="id"
+                type="text"
+                class="form-control"
+                id="id"
+                placeholder="Enter ID"
+              />
+              @if(!idValid){
+              <div class="alert alert-danger">Invalid ID</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                formControlName="name"
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter Name"
+              />
+              @if(!nameValid){
+              <div class="alert alert-danger">Invalid Name</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input
+                formControlName="age"
+                type="number"
+                class="form-control"
+                id="age"
+                placeholder="Enter Age"
+              />
+              @if(!ageValid){
+              <div class="alert alert-danger">Invalid age</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                formControlName="email"
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter Email"
+              />
+              @if(!emailValid){
+              <div class="alert alert-danger">Invalid Email</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                formControlName="address"
+                class="form-control"
+                id="address"
+                rows="3"
+                placeholder="Enter Address"
+              ></textarea>
+            </div>
+            @if(!addressValid){
+            <div class="alert alert-danger">Invalid Address</div>
+            }
+            <button type="submit" class="btn btn-primary" (click)="submit()">
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

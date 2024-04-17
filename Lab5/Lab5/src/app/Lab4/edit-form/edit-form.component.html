@@ -1,0 +1,83 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header h3">Edit Student</div>
+        <div class="card-body">
+          <form [formGroup]="myForm">
+            <div class="mb-3">
+              <label for="id" class="form-label">ID</label>
+              <input
+                formControlName="id"
+                type="text"
+                class="form-control"
+                id="id"
+                value="{{ student.id }}"
+                readonly
+              />
+              @if(!idValid){
+              <div class="alert alert-danger">Invalid ID</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                formControlName="name"
+                type="text"
+                class="form-control"
+                id="name"
+                value="{{ student.name }}"
+              />
+              @if(!nameValid){
+              <div class="alert alert-danger">Invalid Name</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input
+                formControlName="age"
+                type="number"
+                class="form-control"
+                id="age"
+                value="{{ student.age }}"
+              />
+              @if(!ageValid){
+              <div class="alert alert-danger">Invalid age</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                formControlName="email"
+                type="email"
+                class="form-control"
+                id="email"
+                value="{{ student.email }}"
+              />
+              @if(!emailValid){
+              <div class="alert alert-danger">Invalid Email</div>
+              }
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                formControlName="address"
+                class="form-control"
+                id="address"
+                rows="3"
+                value="{{ student.address }}"
+              ></textarea>
+            </div>
+            @if(!addressValid){
+            <div class="alert alert-danger">Invalid Address</div>
+            }
+            <button type="submit" class="btn btn-primary" (click)="submit()">
+              Edit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <p>working form edit</p> -->

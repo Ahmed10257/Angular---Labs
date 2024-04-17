@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Validation Form</h5>
+          <form [formGroup]="myForm" class="d-flex flex-column">
+            <input
+              formControlName="name"
+              type="text"
+              class="form-control mb-3"
+              placeholder="Name"
+            />
+            @if(!nameValid){
+            <div class="alert alert-danger">=Invalid Name</div>
+            }
+            <input
+              formControlName="age"
+              type="text"
+              class="form-control mb-3"
+              placeholder="Age"
+            />
+            @if(!ageValid){
+            <div class="alert alert-danger">Invalid Age</div>
+            }
+            <input
+              formControlName="email"
+              type="text"
+              class="form-control mb-3"
+              placeholder="Email"
+            />
+            @if(!emailValid){
+            <div class="alert alert-danger">Invalid Email</div>
+            }
+            <button
+              (click)="submit()"
+              class="btn btn-primary btn-block mx-auto"
+              style="width: 50%"
+            >
+              Validate
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

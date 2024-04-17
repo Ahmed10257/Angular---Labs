@@ -1,0 +1,19 @@
+<div class="m-5 align-items-center">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{ student.id }} : {{ student.name }}</h4>
+          <h5 class="card-subtitle mb-2 text-muted">Age: {{ student.age }}</h5>
+          <h5 class="card-subtitle mb-2 text-muted">
+            Email: {{ student.email }}
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-end">
+      <button class="btn btn-primary me-3" (click)="editStudent()">Edit</button>
+      <button class="btn btn-danger" (click)="deleteStudent()">Delete</button>
+    </div>
+  </div>
+</div>
